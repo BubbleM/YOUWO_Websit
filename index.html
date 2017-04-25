@@ -4,7 +4,9 @@
 	<meta charset="UTF-8">
 	<title>邮窝</title>
 	<link rel="Shortcut Icon" href="./image/favicon.ico">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -19,7 +21,10 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="#"><img style="margin-top:-15px;" src="image/favicon.png" />邮窝</a>
+		      <a class="navbar-brand" href="#">
+		      	<img style="margin-top:-15px;" src="image/favicon.png" />
+		      	<span style="position: absolute; margin-left:45px;margin-top: -25px;">邮窝</span>
+		      </a>
 		    </div>
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -72,16 +77,25 @@
 	</header>
 	<section id="job"><!-- 就业工作区 -->
 		<div id="container" style="border: 1px solid #CCCCCC;">
-			<div class="row" id="job_name">
-				<h1>就业资讯 <span>Working Life<span></h1>
+			<div class="row page-header" style="margin-left: 15px;">
+  				<h1>就业资讯<small>Working Life</small></h1>
+				<!-- <h1>就业资讯 <span>Working Life<span></h1> -->
 			</div>
 			<div class="row" id="left">
 				<div class="col-md-2" style="border: 1px solid #CCCCCC;">
 					<ul id="left_ul">
-						<li>兼职</li>
-						<li>实习</li>
-						<li>校招</li>
-						<li>更多</li>
+						<li>
+							<span class="glyphicon glyphicon-hand-right">&nbsp;兼职</span>
+						</li>
+						<li>
+							<span class="glyphicon glyphicon-hand-right">&nbsp;实习</span>
+						</li>
+						<li>
+							<span class="glyphicon glyphicon-hand-right">&nbsp;校招</span>
+						</li>
+						<li>
+							<span class="glyphicon glyphicon-hand-right">&nbsp;更多</span>
+						</li>
 					</ul>
 				</div>
 				<div class="col-md-10">
@@ -89,7 +103,7 @@
 						<div class="col-md-5" style="border: 1px solid #CCCCCC;">
 							<h2>热门行业</h2>
 						</div>
-						<div class="col-md-7" style="border: 1px solid #CCCCCC;">
+						<div class="col-md-7" style="border: 1px solid #CCCCCC;margin-left: -15px">
 							<h2>热门职位</h2>
 						</div>
 					</div>
@@ -108,7 +122,7 @@
 								<li>其他</li>
 							</ul>
 						</div>
-						<div class="col-md-7" id="right2">
+						<div class="col-md-7" id="right2" style="margin-left: -15px;">
 							<ul>
 								<li>家教</li>
 								<li>助理</li>
@@ -134,13 +148,155 @@
 		
 	</section>
 	<section id="send_hand"><!-- 二手市场交易区 -->
-		<div id="container">
+		<div id="container" style="margin-right: -15px;">
 			<div class="row" id="hand_con">
 				<div class="col-md-8 col-md-offset-2">
-	                <h1>I got 99 Problems<span>but <em>design</em> 'aint one</span></h1>
+	                <h1>校园二手交易平台<span> 快捷 <em> 物美价廉 </em> 方便 </span></h1>
+	                <a href="#send_hand" class="down-arrow-btn">
+	                	<span class="glyphicon glyphicon-menu-down"></span>
+	                </a>
 	            </div>
 			</div>	
 		</div>
+	</section>
+	<section class="text-center" style="background-color: #ADADAD;">
+		
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators" style="margin-bottom: -20px;">
+		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		  </ol>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" role="listbox">
+		    <div class="item active">
+		    	<div class="row">
+				  <div class="col-sm-6 col-md-4">
+				    <div class="thumbnail">
+				      <img src="image/send_hand/1.jpg" alt="...">
+				      <div class="caption">
+				        <h3>家用电器类</h3>
+				        <p>...</p>
+				        <p><a href="#" class="btn btn-primary" role="button">发布</a> <a href="#" class="btn btn-default" role="button">回收</a></p>
+				      </div>
+				    </div>
+				  </div>
+				   <div class="col-sm-6 col-md-4">
+				    <div class="thumbnail">
+				      <img src="image/send_hand/2.jpg" alt="...">
+				      <div class="caption">
+				        <h3>手机通讯类</h3>
+				        <p>...</p>
+				        <p><a href="#" class="btn btn-primary" role="button">发布</a> <a href="#" class="btn btn-default" role="button">回收</a></p>
+				      </div>
+				    </div>
+				  </div>
+				   <div class="col-sm-6 col-md-4">
+				    <div class="thumbnail">
+				      <img src="image/send_hand/3.jpg" alt="...">
+				      <div class="caption">
+				        <h3>笔记本类</h3>
+				        <p>...</p>
+				        <p><a href="#" class="btn btn-primary" role="button">发布</a> <a href="#" class="btn btn-default" role="button">回收</a></p>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				<div class="carousel-caption">
+		        <!-- ... -->
+		      </div>
+		    </div>
+		    
+			<div class="item">
+		    	<div class="row">
+				  <div class="col-sm-6 col-md-4">
+				    <div class="thumbnail">
+				      <img src="image/send_hand/4.jpg" alt="...">
+				      <div class="caption">
+				        <h3>家用电器类</h3>
+				        <p>...</p>
+				        <p><a href="#" class="btn btn-primary" role="button">发布</a> <a href="#" class="btn btn-default" role="button">回收</a></p>
+				      </div>
+				    </div>
+				  </div>
+				   <div class="col-sm-6 col-md-4">
+				    <div class="thumbnail">
+				      <img src="image/send_hand/5.jpg" alt="...">
+				      <div class="caption">
+				        <h3>手机通讯类</h3>
+				        <p>...</p>
+				        <p><a href="#" class="btn btn-primary" role="button">发布</a> <a href="#" class="btn btn-default" role="button">回收</a></p>
+				      </div>
+				    </div>
+				  </div>
+				   <div class="col-sm-6 col-md-4">
+				    <div class="thumbnail">
+				      <img src="image/send_hand/6.jpg" alt="...">
+				      <div class="caption">
+				        <h3>笔记本类</h3>
+				        <p>...</p>
+				        <p><a href="#" class="btn btn-primary" role="button">发布</a> <a href="#" class="btn btn-default" role="button">回收</a></p>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				<div class="carousel-caption">
+		        <!-- ... -->
+		      </div>
+		    </div>
+
+
+		  	<div class="item">
+		    	<div class="row">
+				  <div class="col-sm-6 col-md-4">
+				    <div class="thumbnail">
+				      <img src="image/send_hand/1.jpg" alt="...">
+				      <div class="caption">
+				        <h3>家用电器类</h3>
+				        <p>...</p>
+				        <p><a href="#" class="btn btn-primary" role="button">发布</a> <a href="#" class="btn btn-default" role="button">回收</a></p>
+				      </div>
+				    </div>
+				  </div>
+				   <div class="col-sm-6 col-md-4">
+				    <div class="thumbnail">
+				      <img src="image/send_hand/2.jpg" alt="...">
+				      <div class="caption">
+				        <h3>手机通讯类</h3>
+				        <p>...</p>
+				        <p><a href="#" class="btn btn-primary" role="button">发布</a> <a href="#" class="btn btn-default" role="button">回收</a></p>
+				      </div>
+				    </div>
+				  </div>
+				   <div class="col-sm-6 col-md-4">
+				    <div class="thumbnail">
+				      <img src="image/send_hand/3.jpg" alt="...">
+				      <div class="caption">
+				        <h3>笔记本类</h3>
+				        <p>...</p>
+				        <p><a href="#" class="btn btn-primary" role="button">发布</a> <a href="#" class="btn btn-default" role="button">回收</a></p>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				<div class="carousel-caption">
+		        <!-- ... -->
+		      </div>
+		    </div>
+
+		  <!-- Controls -->
+		  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="left: 30px;"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="right: 30px;"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+		</div>
+
 	</section>
 	<section id="community"><!-- 社团活动发布区 -->
 		
@@ -172,4 +328,6 @@
 		</div>
     </footer>
 </body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </html>

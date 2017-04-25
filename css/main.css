@@ -26,7 +26,7 @@
 	padding-left: 5px;
 	padding-right: 5px;
 	width: 800px;
-	top:250px;
+	top:220px;
 	/*border: 1px solid red;*/
 }
 .container1 h1{
@@ -48,7 +48,7 @@
 	background-color: #F3F5F8;
 	padding: 90px 0 100px;
 }
-#job_name{
+/*#job_name{
 	height: 50px;
 	margin-bottom: 15px;
 	margin-left: 20px;
@@ -64,19 +64,20 @@
 #job_name h1 span{
 	letter-spacing: 0px;
 	color: #6699CC;
-}
+}*/
 #left{
 	/*margin-left: 60px;*/
 	height: 200px;
 }
 #left_ul{
-	margin-bottom: 33px;
+	margin-bottom: 53px;
 }
 #left_ul li{
 	margin-top: 20px;
 	margin-left: 35px;
 	margin-bottom: 10px;
-	list-style-image: url(../image/job/arrow-right.png);
+	/*list-style-image: url(../image/job/arrow-right.png);*/
+	list-style-type: none;
 }
 #right1{
 	height: 150px;
@@ -105,15 +106,52 @@
 /*二手交易区*/
 #hand_con{
 	/*position: absolute;*/
-	background: url(../image/job/top-bg.jpg) no-repeat center center;
+	background: url(../image/send_hand/top-bg.jpg) no-repeat center center;
 	-webkit-background-size: cover; 
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 	padding: 50px 0;
-	/*width: 100%;
-	height: 100px; */
+	width: 100%;
+	/*height: 100px; */
+	text-align: center;
 }
+#hand_con h1{
+	color: #fff;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+#hand_con h1 span{
+	display: block;
+    font-size: 25px;
+    margin-top: 20px;
+}
+.down-arrow-btn{
+	width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: rgba(61, 201, 179, 0.8);
+    display: inline-block;
+    margin: 10px auto 20px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+}
+.down-arrow-btn span{
+	margin-top: 12px;
+}
+
+
+/*社团活动区*/
+
+
+/*竞赛通知区*/
+
 
 /*页脚*/
 footer {
