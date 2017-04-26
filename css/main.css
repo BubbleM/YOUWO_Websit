@@ -1,3 +1,7 @@
+*{
+	margin:0;
+	padding: 0;
+}
 #home{
 	background: url(../image/bg.jpg) no-repeat center center;
 	-webkit-background-size: cover; 
@@ -5,7 +9,8 @@
 	-o-background-size: cover;
 	background-size: cover;
 	padding: 100px 0 600px 0;
-	width: 100%;
+	/*width: 100%;*/
+	/*margin-right: 0;*/
 	height: auto; 
 	z-index: 1;
 	position: relative;
@@ -151,7 +156,18 @@
 
 
 /*竞赛通知区*/
-
+#competition{
+	padding: 90px 0 100px
+	
+}
+#competition .competition_list img{
+	margin-left: 45px;
+	width: 80px;
+	height: 80px;
+}
+#competition .competition_list h4{
+	padding-top:10px;
+}
 
 /*页脚*/
 footer {

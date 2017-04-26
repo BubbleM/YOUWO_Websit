@@ -8,8 +8,77 @@
 	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
 	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/main.css">
+	<script src="js/main.js"></script>
 </head>
 <body>
+	
+	<!--Login Modal START-->
+	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title text-center" id="myModalLabel">登录</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form>
+	          <div class="form-group">
+	            <label for="recipient-name" class="control-label">用户名：</label>
+	            <input type="text" class="form-control" id="recipient-name"/>
+	          </div>
+	          <div class="form-group">
+	            <label for="password-text" class="control-label">密码：</label>
+	            <input class="form-control" type="password" id="password-text"/>
+	          </div>
+	          <div style="float: right;">
+	          	 <a href="#" data-toggle="modal" data-target="#registerModal">注册用户</a>
+	          	 <a href="#" style="margin:0 20px;">忘记密码</a>
+	          </div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	      	<button type="button" class="btn btn-primary">确定</button>
+	        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- Modal END-->
+
+	<!-- Register Modal START -->
+	<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title text-center" id="myModalLabel">注册</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form>
+	          <div class="form-group">
+	            <label for="recipient-name" class="control-label">用户名：</label>
+	            <input type="text" class="form-control" id="recipient-name"/>
+	          </div>
+	          <div class="form-group">
+	            <label for="password-text" class="control-label">密码：</label>
+	            <input class="form-control" type="password" id="password-text"/>
+	          </div>
+	          <div class="form-group">
+	            <label for="password-text" class="control-label">确认密码：</label>
+	            <input class="form-control" type="password" id="password-text"/>
+	          </div>
+
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	      	<button type="button" class="btn btn-primary">确定</button>
+	        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- Register Modal END -->
+
 	<header>
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 		  <div class="container-fluid">
@@ -36,9 +105,11 @@
 		        <li><a href="#community">社团活动</a></li>
 		        <li><a href="#competition">竞赛通知</a></li>
 		        <li><a href="#help">求助</a></li>
+		        <li>
+					<a href="#" data-toggle="modal" data-target="#loginModal">登录</a>
+		        </li>
 		        <li><a href="#"></a></li>
-		        <li><a href="#"></a></li>
-		        <li><a href="#"></a></li>
+		        
 		        <!-- <li class="dropdown">
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">求助<span class="caret"></span></a>
 		          <ul class="dropdown-menu">
@@ -103,7 +174,7 @@
 						<div class="col-md-5" style="border: 1px solid #CCCCCC;">
 							<h2>热门行业</h2>
 						</div>
-						<div class="col-md-7" style="border: 1px solid #CCCCCC;margin-left: -15px">
+						<div class="col-md-7" style="border: 1px solid #CCCCCC;margin-left:-15px;padding-left: 30px;">
 							<h2>热门职位</h2>
 						</div>
 					</div>
@@ -122,7 +193,7 @@
 								<li>其他</li>
 							</ul>
 						</div>
-						<div class="col-md-7" id="right2" style="margin-left: -15px;">
+						<div class="col-md-7" id="right2" style="margin-left: -15px;padding-left: 35px;">
 							<ul>
 								<li>家教</li>
 								<li>助理</li>
@@ -302,7 +373,95 @@
 		
 	</section>
 	<section id="competition"><!-- 竞赛通知区 -->
-		
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-3" style="border: 1px solid #DDDDDD;height: 500px;padding-top:20px;">
+					<div class="list-group">
+						<ul>
+							<li class="list-group-item active" id="compet1_li" style="border: 1px solid #000;">
+					   			按竞赛性质
+					    		<span class="glyphicon glyphicon-plus-sign" style="float: right;"></span>
+							</li>
+							<li class="list-group-item active" id="compet2_li" style="border: 1px solid #000;">
+								常见竞赛
+					  			<span class="glyphicon glyphicon-plus-sign" style="float: right;"></span>
+							</li>
+						</ul>
+						<ul id="compet1" class="text-center" style="display: none;">
+							<li class="list-group-item">计算机类</li>
+							<li class="list-group-item">电子设计类</li>
+							<li class="list-group-item">数学建模类</li>
+							<li class="list-group-item">语言类</li>
+							<li class="list-group-item">创业计划类</li>
+							<li class="list-group-item">综合类类</li>
+						</ul>
+					  	<ul  id="compet2" class="text-center" style="display: block;">
+					  		<li class="list-group-item">蓝桥杯</li>
+							<li class="list-group-item">软工杯</li>
+							<li class="list-group-item">TI杯</li>
+							<li class="list-group-item">数学建模</li>
+							<li class="list-group-item">全国大学生挑战杯</li>
+							<li class="list-group-item">光电竞赛</li>
+							<li class="list-group-item">全国大学生电子设计竞赛</li>
+							<li class="list-group-item">其他</li>
+					  	</ul>
+					</div>
+				</div>
+				<div class="col-md-9"  style="height: 500px;">
+					<div class="list-group competition_list"><!--list-group-->
+
+						<div class="row list-group-item">
+							<div class="col-md-3">
+								<img src="./image/competition/1.png" alt="">
+							</div>
+							<div class="col-md-9">
+								 <h4 class="list-group-item-heading">
+								 【进行中】全国大学生机器人大赛创业赛</h4>
+					    		<p class="list-group-item-text">...</p>
+							</div>
+						</div>
+						<div class="row list-group-item">
+							<div class="col-md-3">
+								<img src="./image/competition/2.jpg" alt="" style="width: 80px;height: 80px;">
+							</div>
+							<div class="col-md-9">
+								 <h4 class="list-group-item-heading">【进行中】北京联合大学“启明星”第七届大学生课外学术科技作品竞赛</h4>
+					    		<p class="list-group-item-text">...</p>
+							</div>
+						</div>
+						<div class="row list-group-item">
+							<div class="col-md-3">
+								<img src="./image/competition/4.jpg" alt="" style="width: 80px;height: 80px;">
+							</div>
+							<div class="col-md-9">
+								 <h4 class="list-group-item-heading">【进行中】鲁东大学2017年“挑战杯”大学生课外学术科技作品竞赛</h4>
+					    		<p class="list-group-item-text">...</p>
+							</div>
+						</div>
+						<div class="row list-group-item">
+							<div class="col-md-3">
+								<img src="./image/competition/5.jpg" alt="" style="width: 80px;height: 80px;">
+							</div>
+							<div class="col-md-9">
+								 <h4 class="list-group-item-heading"> 
+								 【进行中】2017年 首都师范大学“挑战杯”大学生课外学术科技作品竞赛</h4>
+					    		<p class="list-group-item-text">...</p>
+							</div>
+						</div>
+						<div class="row list-group-item">
+							<div class="col-md-3">
+								<img src="./image/competition/6.png" alt="" style="width: 80px;height: 80px;">
+							</div>
+							<div class="col-md-9">
+								 <h4 class="list-group-item-heading">【已结束】2016年“挑战杯———彩虹人生”全国职业学校创新创效创业大赛</h4>
+					    		<p class="list-group-item-text">...</p>
+							</div>
+						</div>
+			
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 	<section id="help"><!-- 求助区 -->
 		
