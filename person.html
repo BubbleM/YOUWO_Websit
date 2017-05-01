@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>个人中心</title>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style>
+		body{
+			background-color: #f5f5f5;
+		}
+		.span1{
+			margin-right: 20px;
+		}
+	</style>
+	<script src="./js/jquery-1.7.1.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#chagePwd').click(function(){
+				$('#base_info').hide();
+				$('#chagePwd').hide();
+				$('#pwd_info').show();
+			});
+			$('#yeschagePwd').click(function(){
+				alert("修改密码成功！");
+				$('#pwd_info').hide();
+				$('#base_info').show();
+				$('#chagePwd').show();
+			});
+			$('#publish_me').click(function(){
+				$('#favorites').hide();
+				$('#publish_info').show();
+			});
+			$('#favorites_me').click(function(){
+				$('#publish_info').hide();
+				$('#favorites').show();
+			})
+		});
+	</script>
+</head>
+<body>
+	<div class="container-fluid" style="padding:0px 30px;">
+		<div class="row" style="margin-bottom: 10px;"><a href="./index.html">首页</a>/个人中心</div>
+		<div class="row">
+			<div class="col-md-3" style="background-color: #FAFAFA;padding: 30px;height: 600px;">
+				<div class="row">PUBLIC CLASS</div>
+				<div class="row">
+					<div class="media">
+					  <div class="media-left">
+					    <a href="#">
+					      <img class="media-object" src="./image/person/hudi.jpg" alt="..." width="80;height:80;">
+					    </a>
+					  </div>
+					  <div class="media-body">
+					    <h4 class="media-heading">
+					    	Media heading
+							<span class="glyphicon glyphicon-pencil"></span>
+					    </h4>
+					    <span class="glyphicon glyphicon-map-marker">陕西省西安市</span>
+					  </div>
+					</div>
+				</div>
+				<div class="row" style="margin-top: 30px;">
+					<form action="" id="pwd_info" style="display: none;">
+						<ul class="list-group">
+							<li class="list-group-item">
+					  			<label for="" class="control-label">请输入当前密码:</label>
+	            				<input type="text" class="form-control" id=""/>
+					  		</li>
+					  		<li class="list-group-item">
+					  			<label for="" class="control-label">请输入新密码:</label>
+	            				<input type="text" class="form-control" id=""/>
+					  		</li>
+					  		<li class="list-group-item">
+					  			<label for="" class="control-label">确认密码:</label>
+	            				<input type="text" class="form-control" id=""/>
+					  		</li>
+						</ul>
+						<div class="row text-center">
+					 		<button type="button" class="btn btn-success text-center" style="width: 90%;margin-top:50px;" id="yeschagePwd">确认修改</button>
+						</div>
+					</form>
+				<!-- 基本信息列表 -->
+					<ul class="list-group" id="base_info">
+					  <li class="list-group-item">
+					  	<span class="glyphicon glyphicon-user span1"></span>第39123位会员
+					  </li>
+					  <li class="list-group-item">
+					  	<span class="glyphicon glyphicon-heart span1"></span>社团用户
+					  </li>
+					  <li class="list-group-item">
+					  	<span class="glyphicon glyphicon-heart span1"></span>个性签名：
+					  	<span>Just do it!</span>
+					  	<span class="glyphicon glyphicon-pencil"></span>
+					  </li>
+					  <li class="list-group-item">
+					  	<span class="glyphicon glyphicon-heart span1"></span>我的手机：
+					  	<span>18229068767</span>
+					  	<span class="glyphicon glyphicon-pencil"></span>
+					  </li>
+					  <li class="list-group-item">
+					  	<span class="glyphicon glyphicon-heart span1"></span>我的微信：
+					  	<span>123456</span>
+					  	<span class="glyphicon glyphicon-pencil"></span>
+					  </li>
+					  <li class="list-group-item">
+					  	<span class="glyphicon glyphicon-heart span1"></span>账户状态：
+					  	<span>正常</span>
+					  </li>
+					</ul>
+				</div>
+				<div class="row text-center">
+					 <button type="button" class="btn btn-success text-center" style="width: 90%;margin-top:50px;" id="chagePwd">修改密码</button>
+				</div>
+			</div>
+			<div class="col-md-9" style="height:600px;background-color:#FFF;padding: 30px;">
+				<div class="row">
+					<div style="margin:0 auto;width: 200px;font-size: 15px;">
+						<div id="publish_me" style="display: inline; margin-right: 20px;">
+							<span class="glyphicon glyphicon-screenshot">我的发布</span>
+						</div>
+						<div id="favorites_me" style="display: inline;">
+							<span class="glyphicon glyphicon-star">我的收藏</span>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				<!-- 我的发布 -->
+					<ul class="list-group" id="publish_info">
+						<li class="list-group-item" style="height: 50px;">
+						    <span style="float: right;">
+						    	<button  type="button" class="btn btn-primary">修改</button>
+						    	<button type="button" class="btn btn-primary">删除</button>
+						    </span>
+						    <span>[</span>二手交易<span>]：</span>
+						    <span>出售51开发版一套~</span>
+						</li>
+						<li class="list-group-item" style="height: 50px;">
+						    <span style="float: right;">
+						    	<button  type="button" class="btn btn-primary">修改</button>
+						    	<button type="button" class="btn btn-primary">删除</button>
+						    </span>
+						    <span>[</span>二手交易<span>]：</span>
+						    <span>出售51开发版一套~</span>
+						</li>
+						<li class="list-group-item" style="height: 50px;">
+						    <span style="float: right;">
+						    	<button  type="button" class="btn btn-primary">修改</button>
+						    	<button type="button" class="btn btn-primary">删除</button>
+						    </span>
+						    <span>[</span>二手交易<span>]：</span>
+						    <span>出售51开发版一套~</span>
+						</li>
+						<li class="list-group-item" style="height: 50px;">
+						    <span style="float: right;">
+						    	<button  type="button" class="btn btn-primary">修改</button>
+						    	<button type="button" class="btn btn-primary">删除</button>
+						    </span>
+						    <span>[</span>二手交易<span>]：</span>
+						    <span>出售51开发版一套~</span>
+						</li>
+						<li class="list-group-item" style="height: 50px;">
+						    <span style="float: right;">
+						    	<button  type="button" class="btn btn-primary">修改</button>
+						    	<button type="button" class="btn btn-primary">删除</button>
+						    </span>
+						    <span>[</span>二手交易<span>]：</span>
+						    <span>出售51开发版一套~</span>
+						</li>
+						<li class="list-group-item" style="height: 50px;">
+						    <span style="float: right;">
+						    	<button  type="button" class="btn btn-primary">修改</button>
+						    	<button type="button" class="btn btn-primary">删除</button>
+						    </span>
+						    <span>[</span>二手交易<span>]：</span>
+						    <span>出售51开发版一套~</span>
+						</li>
+						<li class="list-group-item" style="height: 50px;">
+						    <span style="float: right;">
+						    	<button  type="button" class="btn btn-primary">修改</button>
+						    	<button type="button" class="btn btn-primary">删除</button>
+						    </span>
+						    <span>[</span>二手交易<span>]：</span>
+						    <span>出售51开发版一套~</span>
+						</li>
+						<li class="list-group-item" style="height: 50px;">
+						    <span style="float: right;">
+						    	<button  type="button" class="btn btn-primary">修改</button>
+						    	<button type="button" class="btn btn-primary">删除</button>
+						    </span>
+						    <span>[</span>二手交易<span>]：</span>
+						    <span>出售51开发版一套~</span>
+						</li>
+					</ul>
+					<!-- 我的收藏 -->
+					<ul class="list-group" id="favorites" style="display: none;">
+						<li class="list-group-item" style="height: 50px;">
+						    <span style="float: right;">
+						    	<button type="button" class="btn btn-primary">删除</button>
+						    </span>
+						    <span>[</span>二手交易<span>]：</span>
+						    <span>出售51开发版一套~</span>
+						</li>
+						<li class="list-group-item" style="height: 50px;">
+						    <span style="float: right;">
+						    	<button type="button" class="btn btn-primary">删除</button>
+						    </span>
+						    <span>[</span>二手交易<span>]：</span>
+						    <span>出售51开发版一套~</span>
+						</li>
+						<li class="list-group-item" style="height: 50px;">
+						    <span style="float: right;">
+						    	<button type="button" class="btn btn-primary">删除</button>
+						    </span>
+						    <span>[</span>二手交易<span>]：</span>
+						    <span>出售51开发版一套~</span>
+						</li>
+						<li class="list-group-item" style="height: 50px;">
+						    <span style="float: right;">
+						    	<button type="button" class="btn btn-primary">删除</button>
+						    </span>
+						    <span>[</span>二手交易<span>]：</span>
+						    <span>出售51开发版一套~</span>
+						</li>
+						<li class="list-group-item" style="height: 50px;">
+						    <span style="float: right;">
+						    	<button type="button" class="btn btn-primary">删除</button>
+						    </span>
+						    <span>[</span>二手交易<span>]：</span>
+						    <span>出售51开发版一套~</span>
+						</li>
+						<li class="list-group-item" style="height: 50px;">
+						    <span style="float: right;">
+						    	<button type="button" class="btn btn-primary">删除</button>
+						    </span>
+						    <span>[</span>二手交易<span>]：</span>
+						    <span>出售51开发版一套~</span>
+						</li>
+						<li class="list-group-item" style="height: 50px;">
+						    <span style="float: right;">
+						    	<button type="button" class="btn btn-primary">删除</button>
+						    </span>
+						    <span>[</span>二手交易<span>]：</span>
+						    <span>出售51开发版一套~</span>
+						</li>
+						<li class="list-group-item" style="height: 50px;">
+						    <span style="float: right;">
+						    	<button type="button" class="btn btn-primary">删除</button>
+						    </span>
+						    <span>[</span>社团<span>]：</span>
+						    <span>21号主持人风采大赛</span>
+						</li>
+					</ul>
+				</div>
+				<div class="row text-center" style="margin-top: 15px;">
+					<nav aria-label="Page navigation">
+					  <ul class="pagination pagination-lg">
+					    <li>
+					      <a href="#" aria-label="Previous">
+					        <span aria-hidden="true">&laquo;</span>
+					      </a>
+					    </li>
+					    <li><a href="#">1</a></li>
+					    <li><a href="#">2</a></li>
+					    <li><a href="#">3</a></li>
+					    <li><a href="#">4</a></li>
+					    <li><a href="#">5</a></li>
+					    <li>
+					      <a href="#" aria-label="Next">
+					        <span aria-hidden="true">&raquo;</span>
+					      </a>
+					    </li>
+					  </ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
