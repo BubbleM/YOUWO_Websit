@@ -4,11 +4,26 @@
 		    $('#chagePwd').click(function() {
 		        $('#base_info').hide();
 		        $('#chagePwd').hide();
+		        $('#chage_Info').hide();
 		        $('#pwd_info').show();
+		    });
+		    $('#chageInfo').click(function() {
+		        $('#base_info').hide();
+		        $('#chagePwd').hide();
+		        $('#pwd_info').hide();
+		        $('#chage_Info').show();
 		    });
 		    $('#yeschagePwd').click(function() {
 		        alert("修改密码成功！");
 		        $('#pwd_info').hide();
+		        $('#chage_Info').hide();
+		        $('#base_info').show();
+		        $('#chagePwd').show();
+		    });
+		    $('#yeschageInfo').click(function() {
+		        alert("修改个人信息成功！");
+		        $('#pwd_info').hide();
+		        $('#chage_Info').hide();
 		        $('#base_info').show();
 		        $('#chagePwd').show();
 		    });

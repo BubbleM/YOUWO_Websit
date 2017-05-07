@@ -20,7 +20,7 @@
 		<div class="row" style="margin-bottom: 10px;"><a href="./index.html">首页</a>/个人中心</div>
 		<div class="row">
 			<div class="col-md-3" style="background-color: #FAFAFA;padding: 30px;height: 600px;">
-				<div class="row">PUBLIC CLASS</div>
+				<div class="row" style="margin-bottom: 5px;">PUBLIC CLASS</div>
 				<div class="row">
 					<div class="media">
 					  <div class="media-left">
@@ -30,14 +30,39 @@
 					  </div>
 					  <div class="media-body">
 					    <h4 class="media-heading">
-					    	Media heading
-							<span class="glyphicon glyphicon-pencil"></span>
+					    	</br>Media heading
+							<!-- <span class="glyphicon glyphicon-pencil"></span> -->
 					    </h4>
 					    <span class="glyphicon glyphicon-map-marker">陕西省西安市</span>
 					  </div>
 					</div>
 				</div>
 				<div class="row" style="margin-top: 30px;">
+				<!-- 修改个人信息 -->
+					<form action="" id="chage_Info" style="display:none;">
+						<ul class="list-group">
+							<li class="list-group-item">
+					  			<label for="" class="control-label">昵称:</label>
+	            				<input type="text" class="form-control" id=""/>
+					  		</li>
+					  		<li class="list-group-item">
+					  			<label for="" class="control-label">个性签名:</label>
+	            				<input type="text" class="form-control" id=""/>
+					  		</li>
+					  		<li class="list-group-item">
+					  			<label for="" class="control-label">我的手机:</label>
+	            				<input type="text" class="form-control" id=""/>
+					  		</li>
+					  		<li class="list-group-item">
+					  			<label for="" class="control-label">我的微信:</label>
+	            				<input type="text" class="form-control" id=""/>
+					  		</li>
+						</ul>
+						<div class="row text-center">
+					 		<button type="button" class="btn btn-success text-center" style="width: 90%;margin-top:50px;" id="yeschageInfo">确认修改</button>
+						</div>
+					</form>
+					<!-- 修改密码 -->
 					<form action="" id="pwd_info" style="display: none;">
 						<ul class="list-group">
 							<li class="list-group-item">
@@ -68,17 +93,17 @@
 					  <li class="list-group-item">
 					  	<span class="glyphicon glyphicon-heart span1"></span>个性签名：
 					  	<span>Just do it!</span>
-					  	<span class="glyphicon glyphicon-pencil"></span>
+					  	<!-- <span class="glyphicon glyphicon-pencil"></span> -->
 					  </li>
 					  <li class="list-group-item">
 					  	<span class="glyphicon glyphicon-heart span1"></span>我的手机：
 					  	<span>18229068767</span>
-					  	<span class="glyphicon glyphicon-pencil"></span>
+					  	<!-- <span class="glyphicon glyphicon-pencil"></span> -->
 					  </li>
 					  <li class="list-group-item">
 					  	<span class="glyphicon glyphicon-heart span1"></span>我的微信：
 					  	<span>123456</span>
-					  	<span class="glyphicon glyphicon-pencil"></span>
+					  	<!-- <span class="glyphicon glyphicon-pencil"></span> -->
 					  </li>
 					  <li class="list-group-item">
 					  	<span class="glyphicon glyphicon-heart span1"></span>账户状态：
@@ -88,6 +113,9 @@
 				</div>
 				<div class="row text-center">
 					 <button type="button" class="btn btn-success text-center" style="width: 90%;margin-top:50px;" id="chagePwd">修改密码</button>
+				</div>
+				<div class="row text-center">
+					 <button type="button" class="btn btn-success text-center" style="width: 90%;margin-top:5px;" id="chageInfo">修改个人信息</button>
 				</div>
 			</div>
 			<div class="col-md-9" style="height:600px;background-color:#FFF;padding: 30px;">
